@@ -1,0 +1,138 @@
+{
+	"Simple template": {
+		"prefix": "qwe",
+		"body": [
+			"#include <bits/stdc++.h>",
+			"using namespace std;",
+			"#define int long long",
+			"#define float long double",
+			"",
+			"signed main()",
+			"{",
+			"    ios_base::sync_with_stdio(false), cin.tie(NULL), cout.tie(NULL);",
+			"    $1",
+			"    return 0;",
+			"}",
+		],
+		"description": "Log output to console"
+	},
+	"sqrt prime test": {
+		"prefix": "primeTest",
+		"body": [
+			"bool isPrime(int num)",
+			"{",
+			"    if (num <= 1)",
+			"        return false;",
+			"    if (num == 2)",
+			"        return true;",
+			"    if (num % 2 == 0)",
+			"        return false;",
+			"    for (int i = 3; i * i <= num; i += 2)",
+			"        if (num % i == 0)",
+			"            return false;",
+			"    return true;",
+			"}",
+		],
+		"description": "Log output to console"
+	},
+	"seive prime test": {
+		"prefix": "seivePrimeTest",
+		"body": [
+			"const int N = 1e6 + 7;",
+			"int is_Prime[N];",
+			"void Seive()",
+			"{",
+			"    int n = 1e6;",
+			"    for (int i = 1; i <= n; i++)",
+			"        is_Prime[i] = 1;",
+			"    is_Prime[0] = is_Prime[1] = 0;",
+			"    for (int i = 2; i * i <= n; i++)",
+			"    {",
+			"        if (is_Prime[i])",
+			"        {",
+			"            for (int j = i * i; j <= n; j += i)",
+			"                is_Prime[j] = 0;",
+			"        }",
+			"    }",
+			"}",
+		],
+		"description": "Log output to console"
+	},
+	"binary exponential": {
+		"prefix": "binexpo",
+		"body": [
+			"const long long M = 1e18 + 7;",
+			"int power(int a, int b, long long m = M)",
+			"{",
+			"    int ans = 1;",
+			"    while (b != 0)",
+			"    {",
+			"        if (b & 1)",
+			"        {",
+			"            ans = (ans * a) % m;",
+			"        }",
+			"        a = (a * a) % m;",
+			"        b = b >> 1;",
+			"    }",
+			"    return ans;",
+			"}",
+		],
+		"description": "Log output to console"
+	},
+	"gcd and lcm": {
+		"prefix": "gcd",
+		"body": [
+			"int gcd(int a, int b)",
+			"{",
+			"    if (b == 0)",
+			"        return a;",
+			"    return gcd(b, a % b);",
+			"}",
+			"int lcm(int a, int b) { return ((a * b) / gcd(a, b));}"
+		],
+		"description": "Log output to console"
+	},
+	"for thy loop": {
+		"prefix": "ff",
+		"body": [
+			"for(int i=0; i<n; ++i)",
+			"{",
+			"    $1",
+			"}",
+		],
+		"description": "Log output to console"
+	},
+	"say Yess!!": {
+		"prefix": "cy",
+		"body": [
+			"cout << \"YES\\n\";"
+		],
+		"description": "Log output to console"
+	},
+	"say Nooo!!": {
+		"prefix": "cn",
+		"body": [
+			"cout << \"NO\\n\";"
+		],
+		"description": "Log output to console"
+	},
+	"make thy vector": {
+		"prefix": "vec",
+		"body": [
+			"vector<int> v(n);"
+		],
+		"description": "Log output to console"
+	},
+	"test it ": {
+		"prefix": "test",
+		"body": [
+			"int t;",
+			"cin >> t;",
+			"while (t--)",
+			"{",
+			"    $1",
+			"}",
+		],
+		"description": "Log output to console"
+	},
+}
